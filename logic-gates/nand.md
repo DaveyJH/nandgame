@@ -1,3 +1,20 @@
+# NAND Gate
+
+## Logic
+
+|Input A|Input B|Output|
+|:-----:|:-----:|:----:|
+|      0|      0|     1|
+|      1|      0|     1|
+|      0|      1|     1|
+|      1|      1|     0|
+
+## Usage
+
+High output unless both inputs are high.
+
+---
+
 ```mermaid
 ---
 title: NAND Gate -- 0 | 0
