@@ -32,3 +32,17 @@ linkStyle 1 stroke:#33f,stroke-width:3px;
 linkStyle 2 stroke:#33f,stroke-width:3px;
 linkStyle 3 stroke:#33f,stroke-width:3px;
 ```
+
+---
+
+```mermaid
+---
+title: Simplified Invert (no I/O shown)
+---
+flowchart LR;
+
+subgraph Invert;
+  direction LR;
+  i1i[input] --> i1o[output];
+end;
+```
