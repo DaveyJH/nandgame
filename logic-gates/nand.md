@@ -141,13 +141,15 @@ linkStyle 6 stroke:#33f,stroke-width:3px;
 linkStyle 7 stroke:#33f,stroke-width:3px;
 ```
 
+---
+
 ```mermaid
 ---
 title: Simplified NAND (no I/O shown)
 ---
 flowchart LR;
 
-subgraph "NAND";
+subgraph NAND;
   direction LR;
   n1ina[a] & n1inb[b] --> n1o[output];
 end;
