@@ -1,3 +1,18 @@
+# Invert Gate
+
+## Logic
+
+|Input A|Output|
+|:-----:|:----:|
+|      0|     1|
+|      1|     0|
+
+## Usage
+
+Reverses input.
+
+---
+
 ```mermaid
 ---
 title: Invert -- 0
