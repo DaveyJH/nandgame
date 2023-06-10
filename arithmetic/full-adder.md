@@ -23,7 +23,7 @@ flowchart BT
 subgraph "Full Adder -- 1 | 0 | 0"
 direction BT
 
-a[a]----->n1(NAND) & n2(NAND);
+a[a]:::ON----->n1(NAND) & n2(NAND);
 b[b]-->n3(NAND) & n4(NAND);
 c[c]-->n4 & n5(NAND);
 n1-->n2 & n6(NAND) & n8(NAND);
@@ -34,7 +34,8 @@ n5-->n7;
 n6--->h[h];
 n7-->n8 & n1;
 n8-->n9;
-n9-->l[l];
+n9-->l[l]:::ON;
+classDef ON stroke:#33f,stroke-width:3px;
 linkStyle 0 stroke:#33f,stroke-width:3px;
 linkStyle 1 stroke:#33f,stroke-width:3px;
 linkStyle 6 stroke:#33f,stroke-width:3px;
@@ -56,7 +57,7 @@ subgraph "Full Adder -- 0 | 1 | 0"
 direction BT
 
 a[a]----->n1(NAND) & n2(NAND);
-b[b]-->n3(NAND) & n4(NAND);
+b[b]:::ON-->n3(NAND) & n4(NAND);
 c[c]-->n4 & n5(NAND);
 n1-->n2 & n6(NAND) & n8(NAND);
 n2-->n9(NAND);
@@ -66,7 +67,8 @@ n5-->n7;
 n6--->h[h];
 n7-->n8 & n1;
 n8-->n9;
-n9-->l[l];
+n9-->l[l]:::ON;
+classDef ON stroke:#33f,stroke-width:3px;
 linkStyle 2 stroke:#33f,stroke-width:3px;
 linkStyle 3 stroke:#33f,stroke-width:3px;
 linkStyle 6 stroke:#33f,stroke-width:3px;
@@ -90,7 +92,7 @@ direction BT
 
 a[a]----->n1(NAND) & n2(NAND);
 b[b]-->n3(NAND) & n4(NAND);
-c[c]-->n4 & n5(NAND);
+c[c]:::ON-->n4 & n5(NAND);
 n1-->n2 & n6(NAND) & n8(NAND);
 n2-->n9(NAND);
 n3-->n7(NAND);
@@ -99,7 +101,8 @@ n5-->n7;
 n6--->h[h];
 n7-->n8 & n1;
 n8-->n9;
-n9-->l[l];
+n9-->l[l]:::ON;
+classDef ON stroke:#33f,stroke-width:3px;
 linkStyle 4 stroke:#33f,stroke-width:3px;
 linkStyle 5 stroke:#33f,stroke-width:3px;
 linkStyle 6 stroke:#33f,stroke-width:3px;
@@ -121,18 +124,19 @@ flowchart BT
 subgraph "Full Adder -- 1 | 1 | 0"
 direction BT
 
-a[a]----->n1(NAND) & n2(NAND);
-b[b]-->n3(NAND) & n4(NAND);
+a[a]:::ON----->n1(NAND) & n2(NAND);
+b[b]:::ON-->n3(NAND) & n4(NAND);
 c[c]-->n4 & n5(NAND);
 n1-->n2 & n6(NAND) & n8(NAND);
 n2-->n9(NAND);
 n3-->n7(NAND);
 n4-->n3 & n6 & n5;
 n5-->n7;
-n6--->h[h];
+n6--->h[h]:::ON;
 n7-->n8 & n1;
 n8-->n9;
 n9-->l[l];
+classDef ON stroke:#33f,stroke-width:3px;
 linkStyle 0 stroke:#33f,stroke-width:3px;
 linkStyle 1 stroke:#33f,stroke-width:3px;
 linkStyle 2 stroke:#33f,stroke-width:3px;
@@ -155,17 +159,18 @@ subgraph "Full Adder -- 0 | 1 | 1"
 direction BT
 
 a[a]----->n1(NAND) & n2(NAND);
-b[b]-->n3(NAND) & n4(NAND);
-c[c]-->n4 & n5(NAND);
+b[b]:::ON-->n3(NAND) & n4(NAND);
+c[c]:::ON-->n4 & n5(NAND);
 n1-->n2 & n6(NAND) & n8(NAND);
 n2-->n9(NAND);
 n3-->n7(NAND);
 n4-->n3 & n6 & n5;
 n5-->n7;
-n6--->h[h];
+n6--->h[h]:::ON;
 n7-->n8 & n1;
 n8-->n9;
 n9-->l[l];
+classDef ON stroke:#33f,stroke-width:3px;
 linkStyle 2 stroke:#33f,stroke-width:3px;
 linkStyle 3 stroke:#33f,stroke-width:3px;
 linkStyle 4 stroke:#33f,stroke-width:3px;
@@ -186,18 +191,19 @@ flowchart BT
 subgraph "Full Adder -- 1 | 0 | 1"
 direction BT
 
-a[a]----->n1(NAND) & n2(NAND);
+a[a]:::ON----->n1(NAND) & n2(NAND);
 b[b]-->n3(NAND) & n4(NAND);
-c[c]-->n4 & n5(NAND);
+c[c]:::ON-->n4 & n5(NAND);
 n1-->n2 & n6(NAND) & n8(NAND);
 n2-->n9(NAND);
 n3-->n7(NAND);
 n4-->n3 & n6 & n5;
 n5-->n7;
-n6--->h[h];
+n6--->h[h]:::ON;
 n7-->n8 & n1;
 n8-->n9;
 n9-->l[l];
+classDef ON stroke:#33f,stroke-width:3px;
 linkStyle 0 stroke:#33f,stroke-width:3px;
 linkStyle 1 stroke:#33f,stroke-width:3px;
 linkStyle 4 stroke:#33f,stroke-width:3px;
@@ -219,18 +225,19 @@ flowchart BT
 subgraph "Full Adder -- 1 | 1 | 1"
 direction BT
 
-a[a]----->n1(NAND) & n2(NAND);
-b[b]-->n3(NAND) & n4(NAND);
-c[c]-->n4 & n5(NAND);
+a[a]:::ON----->n1(NAND) & n2(NAND);
+b[b]:::ON-->n3(NAND) & n4(NAND);
+c[c]:::ON-->n4 & n5(NAND);
 n1-->n2 & n6(NAND) & n8(NAND);
 n2-->n9(NAND);
 n3-->n7(NAND);
 n4-->n3 & n6 & n5;
 n5-->n7;
-n6--->h[h];
+n6--->h[h]:::ON;
 n7-->n8 & n1;
 n8-->n9;
-n9-->l[l];
+n9-->l[l]:::ON;
+classDef ON stroke:#33f,stroke-width:3px;
 linkStyle 0 stroke:#33f,stroke-width:3px;
 linkStyle 1 stroke:#33f,stroke-width:3px;
 linkStyle 2 stroke:#33f,stroke-width:3px;
