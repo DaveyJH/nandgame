@@ -807,6 +807,6 @@ flowchart LR;
 
 subgraph Full Adder;
   direction LR;
-  fa1ina[input a] & fa1inb[input b] & fa1inc[input c] ~~~ ha1oh[output high] & ha1ol[output low];
+  fa1ina[input a] & fa1inb[input b] & fa1inc[input c] ~~~ fa1oh[output high] & fa1ol[output low];
 end;
 ```
