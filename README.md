@@ -41,4 +41,6 @@ and I think this is really cool! ¯\\\_(ツ)\_/¯
 
 - [Half Adder](arithmetic/half-adder.md)
 - [Full Adder](arithmetic/full-adder.md)
-- [Multi-bit Adder](arithmetic/multi-bit-adder.md)
+- Multi-bit Adder
+  - [Part 1](arithmetic/multi-bit-adder-part-1.md)
+  - [Part 2](arithmetic/multi-bit-adder-part-2.md)
