@@ -1,5 +1,84 @@
 # 4-bit Multi-Adder
 
+```mermaid
+---
+title: Multi-bit Adder | 4-bit Output
+---
+flowchart LR;
+
+subgraph fa1 [Full Adder];
+  direction LR;
+  fa1ina[a] & fa1inb[b] & fa1inc[c] ~~~ fa1oh[high] & fa1ol[low];
+end;
+
+subgraph fa2 [Full Adder];
+  direction LR;
+  fa2ina[a] & fa2inb[b] & fa2inc[c] ~~~ fa2oh[high] & fa2ol[low];
+end;
+
+subgraph fa3 [Full Adder];
+  direction LR;
+  fa3ina[a] & fa3inb[b] & fa3inc[c] ~~~ fa3oh[high] & fa3ol[low];
+end;
+
+subgraph inputs [Inputs];
+  direction TB;
+  subgraph a# [3-bit number];
+    a0[a0];
+    a1[a1];
+    a2[a2];
+  end
+  subgraph b# [3-bit number];
+    b0[b0];
+    b1[b1];
+    b2[b2];
+  end
+  subgraph c# [1-bit carry];
+    c0[c0];
+  end
+end;
+
+subgraph outputs [Outputs];
+  direction TB;
+  s0[s0];
+  s1[s1];
+  s2[s2];
+  co[c];
+end;
+
+a0 --> fa1ina;
+b0 --> fa1inb;
+c0 --> fa1inc;
+fa1ol --> s0;
+a1 --> fa2ina;
+b1 --> fa2inb;
+fa1oh --> fa2inc;
+fa2ol --> s1;
+a2 --> fa3ina;
+b2 --> fa3inb;
+fa2oh --> fa3inc;
+fa3ol --> s2;
+fa3oh --> co;
+
+linkStyle 18 stroke:#33f,stroke-width:3px;
+linkStyle 19 stroke:#33f,stroke-width:3px;
+linkStyle 20 stroke:#33f,stroke-width:3px;
+linkStyle 21 stroke:#33f,stroke-width:3px;
+linkStyle 22 stroke:#3f3,stroke-width:3px;
+linkStyle 23 stroke:#3f3,stroke-width:3px;
+linkStyle 24 stroke:#3f3,stroke-width:3px;
+linkStyle 25 stroke:#3f3,stroke-width:3px;
+linkStyle 26 stroke:#f33,stroke-width:3px;
+linkStyle 27 stroke:#f33,stroke-width:3px;
+linkStyle 28 stroke:#f33,stroke-width:3px;
+linkStyle 29 stroke:#f33,stroke-width:3px;
+linkStyle 30 stroke:#ff3,stroke-width:3px;
+```
+
+## Usage
+
+Adds two 3-bit numbers and a 1-bit carry.
+
 ## Logic
 
 <!-- 128 permutations of the inputs... Not something I fancy writing. Let's try
@@ -135,78 +214,3 @@ and write a script for this instead. -->
 |       1|       1|       1|       1|       1|       0|      1|       1|        1|        1|        0|     14|
 |       1|       1|       1|       1|       1|       1|      0|       1|        1|        1|        0|     14|
 |       1|       1|       1|       1|       1|       1|      1|       1|        1|        1|        1|     15|
-
-```mermaid
----
-title: Multi-bit Adder | 4-bit Output
----
-flowchart LR;
-
-subgraph fa1 [Full Adder];
-  direction LR;
-  fa1ina[a] & fa1inb[b] & fa1inc[c] ~~~ fa1oh[high] & fa1ol[low];
-end;
-
-subgraph fa2 [Full Adder];
-  direction LR;
-  fa2ina[a] & fa2inb[b] & fa2inc[c] ~~~ fa2oh[high] & fa2ol[low];
-end;
-
-subgraph fa3 [Full Adder];
-  direction LR;
-  fa3ina[a] & fa3inb[b] & fa3inc[c] ~~~ fa3oh[high] & fa3ol[low];
-end;
-
-subgraph inputs [Inputs];
-  direction TB;
-  subgraph a# [3-bit number];
-    a0[a0];
-    a1[a1];
-    a2[a2];
-  end
-  subgraph b# [3-bit number];
-    b0[b0];
-    b1[b1];
-    b2[b2];
-  end
-  subgraph c# [1-bit carry];
-    c0[c0];
-  end
-end;
-
-subgraph outputs [Outputs];
-  direction TB;
-  s0[s0];
-  s1[s1];
-  s2[s2];
-  co[c];
-end;
-
-a0 --> fa1ina;
-b0 --> fa1inb;
-c0 --> fa1inc;
-fa1ol --> s0;
-a1 --> fa2ina;
-b1 --> fa2inb;
-fa1oh --> fa2inc;
-fa2ol --> s1;
-a2 --> fa3ina;
-b2 --> fa3inb;
-fa2oh --> fa3inc;
-fa3ol --> s2;
-fa3oh --> co;
-
-linkStyle 18 stroke:#33f,stroke-width:3px;
-linkStyle 19 stroke:#33f,stroke-width:3px;
-linkStyle 20 stroke:#33f,stroke-width:3px;
-linkStyle 21 stroke:#33f,stroke-width:3px;
-linkStyle 22 stroke:#3f3,stroke-width:3px;
-linkStyle 23 stroke:#3f3,stroke-width:3px;
-linkStyle 24 stroke:#3f3,stroke-width:3px;
-linkStyle 25 stroke:#3f3,stroke-width:3px;
-linkStyle 26 stroke:#f33,stroke-width:3px;
-linkStyle 27 stroke:#f33,stroke-width:3px;
-linkStyle 28 stroke:#f33,stroke-width:3px;
-linkStyle 29 stroke:#f33,stroke-width:3px;
-linkStyle 30 stroke:#ff3,stroke-width:3px;
-```
