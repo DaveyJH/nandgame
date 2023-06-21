@@ -44,3 +44,6 @@ and I think this is really cool! ¯\\\_(ツ)\_/¯
 - Multi-bit Adder
   - [Part 1](arithmetic/multi-bit-adder-part-1.md)
   - [Part 2](arithmetic/multi-bit-adder-part-2.md)
+- [3-bit Adder](arithmetic/multi-bit-adder-4-bit-output.md)
+- [4-bit Adder](arithmetic/multi-bit-adder-5-bit-output.md)
+- [16-bit Adder](arithmetic/16-bit-adder.md)
